@@ -5,18 +5,6 @@ const Palindrome = (function() {
       this.palindrome = pal
     }
 
-    renderUserInput() {
-      let div = document.createElement('div')
-      div.setAttribute("id", "userWord")
-      for(let i = 0; i < this.palindrome.length; i++) {
-        let h1 = document.createElement('h1')
-        h1.innerText = this.palindrome[i]
-        h1.setAttribute("id", i)
-        div.append(h1)
-      }
-      return div
-    }
-
     palindromeTest() {
       let testObj = {}
       let word = this.palindrome.replace(/[^\w]|_/g, "").toLowerCase()

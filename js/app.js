@@ -11,9 +11,6 @@ const App = (function() {
 
     static getUserInput(userPalindrome) {
       let newTest = new Palindrome(userPalindrome)
-      let testCont = document.getElementById('palindromeContainer')
-      testCont.innerHTML = ''
-      testCont.append(newTest.renderUserInput())
       let outcome = newTest.palindromeTest()
       if (outcome) {
         App.winner()
@@ -24,11 +21,15 @@ const App = (function() {
     }
 
     static winner() {
-      console.log("WINNER")
+      let image = document.getElementById('eightBallImage')
+      image.setAttribute("src", "images/eightBallYes.png")
+      image.setAttribute("alt", "eightBallYes")
     }
 
     static tryagain() {
-      console.log("TRY AGAIN")
+      let image = document.getElementById('eightBallImage')
+      image.setAttribute("src", "images/eightBallNo.png")
+      image.setAttribute("alt", "eightBallNo")
     }
 
 
